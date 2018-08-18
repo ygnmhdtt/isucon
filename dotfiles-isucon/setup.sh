@@ -30,6 +30,9 @@ sudo apt install tig
 # install tmux
 sudo apt install tmux
 
+# install jq
+sudo apt install jq
+
 DOTFILES=$PWD
 
 ln -sf $DOTFILES/.vimrc $HOME/.vimrc
@@ -39,3 +42,16 @@ ln -sf $DOTFILES/.gitconfig $HOME/.gitconfig
 ln -sf $DOTFILES/.tigrc $HOME/.tigrc
 
 . $HOME/.zshrc
+
+# install kataribe
+go get github.com/matsuu/kataribe
+
+# install pt-query-digest
+wget https://www.percona.com/downloads/percona-toolkit/3.0.11/binary/debian/bionic/amd64/percona-toolkit_3.0.11-1.bionic_amd64.deb
+sudo dpkg -i percona-toolkit_3.0.11-1.bionic_amd64.deb
+
+# ssh key for github
+cd $HOME
+mkdir .ssh
+cd .ssh
+ssh-keygen -t rsa -f github_rsa_isucon -P ""
