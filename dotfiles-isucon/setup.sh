@@ -9,8 +9,7 @@ sudo apt update -y && sudo apt upgrade -y
 
 # install zsh
 sudo apt -y install zsh
-sudo apt -y install zsh-completion
-chsh -s `which zsh`
+# chsh -s `which zsh`
 
 # install (latest) vim
 wget https://github.com/vim/vim/archive/v8.1.0290.tar.gz
@@ -32,13 +31,11 @@ sudo apt -y install tmux
 # install jq
 sudo apt -y install jq
 
-DOTFILES=$PWD
-
-ln -sf $DOTFILES/.vimrc $HOME/.vimrc
-ln -sf $DOTFILES/.zshrc $HOME/.zshrc
-ln -sf $DOTFILES/.tmux.conf $HOME/.tmux.conf
-ln -sf $DOTFILES/.gitconfig $HOME/.gitconfig
-ln -sf $DOTFILES/.tigrc $HOME/.tigrc
+ln -sf $HOME/ygnmhdtt-isucon/dotfiles-isucon/.vimrc $HOME/.vimrc
+ln -sf $HOME/ygnmhdtt-isucon/dotfiles-isucon/.zshrc $HOME/.zshrc
+ln -sf $HOME/ygnmhdtt-isucon/dotfiles-isucon/.tmux.conf $HOME/.tmux.conf
+ln -sf $HOME/ygnmhdtt-isucon/dotfiles-isucon/.gitconfig $HOME/.gitconfig
+ln -sf $HOME/ygnmhdtt-isucon/dotfiles-isucon/.tigrc $HOME/.tigrc
 
 . $HOME/.zshrc
 
@@ -48,3 +45,4 @@ go get github.com/matsuu/kataribe
 # install pt-query-digest
 sudo apt -y install percona-toolkit
 
+sudo usermod -s `which zsh` isucon
