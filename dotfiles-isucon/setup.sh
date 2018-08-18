@@ -8,8 +8,8 @@ cd $HOME
 sudo apt update -y && sudo apt upgrade -y
 
 # install zsh
-sudo apt install zsh
-sudo apt install zsh-completion
+sudo apt -y install zsh
+sudo apt -y install zsh-completion
 chsh -s `which zsh`
 
 # install (latest) vim
@@ -24,13 +24,13 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # install tig
-sudo apt install tig
+sudo apt -y install tig
 
 # install tmux
-sudo apt install tmux
+sudo apt -y install tmux
 
 # install jq
-sudo apt install jq
+sudo apt -y install jq
 
 DOTFILES=$PWD
 
@@ -46,6 +46,5 @@ ln -sf $DOTFILES/.tigrc $HOME/.tigrc
 go get github.com/matsuu/kataribe
 
 # install pt-query-digest
-wget https://www.percona.com/downloads/percona-toolkit/3.0.11/binary/debian/bionic/amd64/percona-toolkit_3.0.11-1.bionic_amd64.deb
-sudo dpkg -i percona-toolkit_3.0.11-1.bionic_amd64.deb
+sudo apt -y install percona-toolkit
 
