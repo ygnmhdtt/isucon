@@ -1,3 +1,11 @@
+# nginx
+
+* kataribe
+
+```
+cat /var/log/nginx/access.log | ./kataribe [-f kataribe.toml]
+```
+
 # MySQL
 
 * スロークエリログ設定確認
