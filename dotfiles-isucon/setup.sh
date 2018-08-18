@@ -1,8 +1,21 @@
 #!/bin/bash
+set -e
 
 # goをインストールした後に実行する
 
-set -e
+# ssh key for github
+if [ ! -e $HOME/.ssh/github_rsa_isucon ]; then
+  mkdir $HOME/.ssh
+  cd $HOME/.ssh
+  ssh-keygen -t rsa -f github_rsa_isucon -P ""
+  cat << EOT > $HOME/.ssh/config
+Host github github.com
+  HostName github.com
+  IdentityFile ~/.ssh/github_rsa_isucon
+  User git
+EOT
+fi
+
 
 cd $HOME
 
@@ -50,8 +63,3 @@ go get github.com/matsuu/kataribe
 wget https://www.percona.com/downloads/percona-toolkit/3.0.11/binary/debian/bionic/amd64/percona-toolkit_3.0.11-1.bionic_amd64.deb
 sudo dpkg -i percona-toolkit_3.0.11-1.bionic_amd64.deb
 
-# ssh key for github
-cd $HOME
-mkdir .ssh
-cd .ssh
-ssh-keygen -t rsa -f github_rsa_isucon -P ""
