@@ -1,3 +1,20 @@
+# common
+
+* ユーザ作成など
+```
+sudo groupadd isucon
+sudo useradd -m -g isucon -s /bin/bash isucon
+sudo gpasswd -a isucon isucon
+sudo gpasswd -a isucon sudo
+sudo passwd isucon
+sudo visudo
+
+以下のように記載
+---
+%isucon   ALL=(ALL)   NOPASSWD: ALL
+---
+```
+
 # nginx
 
 * kataribe
