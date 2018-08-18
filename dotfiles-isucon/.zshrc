@@ -9,6 +9,7 @@ export LESS='-i -M -R -W -q -S'
 export PATH=$PATH:/home/isucon/local/go/bin
 export GOPATH=`go env GOPATH`
 export PATH=$PATH:$GOPATH/bin
+export PATH=$HOME/local/go/bin:$HOME/go/bin:$PATH
 
 # default editor
 export EDITOR="vim"
@@ -29,7 +30,7 @@ alias vi='vim'
 # git
 # ----------------
 
-alias gb='git branch'
+# alias gb='git branch'
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
 alias gla='git log --graph --all --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
 alias gs='git status'
