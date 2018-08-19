@@ -6,6 +6,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'elzr/vim-json'
 Plug 'tpope/vim-endwise'
 Plug 'itchyny/lightline.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-sleuth'
@@ -121,7 +122,7 @@ let g:ale_fix_on_save = 1
 " fzf.vim
 "----------------------------------------------------------------------------
 " for fzf installed by homebrew
-set rtp+=/usr/local/opt/fzf
+" set rtp+=/usr/local/opt/fzf
 
 nmap ; :Buffers
 nmap t :Files
