@@ -46,3 +46,14 @@ go get github.com/matsuu/kataribe
 sudo apt -y install percona-toolkit
 
 sudo usermod -s `which zsh` isucon
+
+# install minifier
+sudo apt install nodejs
+sudo apt install npm
+sudo npm cache clean
+sudo npm install -g n
+sudo n stable
+sudo npm update -g npm
+sudo npm install uglify-js -g
+sudo npm install uglifycss -g
+sudo npm install html-minifier -g
