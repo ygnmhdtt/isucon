@@ -1,0 +1,6 @@
+[submodule "isucon7/isubata"]
+	path = isucon7/isubata
+	url = https://github.com/ygnmhdtt/isubata.git
+[submodule "isucon6/isucon6"]
+	path = isucon6/isucon6
+	url = https://github.com/ygnmhdtt/isucon6.git
