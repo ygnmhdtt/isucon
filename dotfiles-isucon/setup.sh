@@ -3,6 +3,7 @@ set -e
 
 if [ `which go` = ""  ]; then
   echo "Install go"
+  echo "example for xbuil : $ xbuild/go-install 1.10 ~/local/go"
   exit 1
 fi
 
@@ -44,7 +45,7 @@ ln -sf $HOME/isucon/dotfiles-isucon/.gitconfig $HOME/.gitconfig
 ln -sf $HOME/isucon/dotfiles-isucon/.tigrc $HOME/.tigrc
 
 sudo usermod -s `which zsh` isucon
-. $HOME/.zshrc
+# . $HOME/.zshrc
 
 # install kataribe
 go get github.com/matsuu/kataribe
@@ -62,3 +63,5 @@ sudo npm update -g npm
 sudo npm install uglify-js -g
 sudo npm install uglifycss -g
 sudo npm install html-minifier -g
+
+echo 'setup done. Exit and relogin to change shell'

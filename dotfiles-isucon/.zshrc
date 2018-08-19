@@ -7,6 +7,7 @@ export LESS='-i -M -R -W -q -S'
 
 # golang
 export PATH=$PATH:/home/isucon/local/go/bin
+export GOROOT=/home/isucon/local/go
 export GOPATH=`go env GOPATH`
 export PATH=$PATH:$GOPATH/bin
 export PATH=$HOME/local/go/bin:$HOME/go/bin:$PATH
