@@ -1,7 +1,10 @@
 #!/bin/bash
 set -e
 
-# goをインストールした後に実行する
+if [ `which go` = ""  ]; then
+  echo "Install go"
+  exit 1
+fi
 
 cd $HOME
 
@@ -12,6 +15,7 @@ sudo apt -y install zsh
 # chsh -s `which zsh`
 
 # install (latest) vim
+sudo apt remove vim
 wget https://github.com/vim/vim/archive/v8.1.0290.tar.gz
 tar xzvf v8.1.0290.tar.gz
 cd vim-8.1.0290/
@@ -20,7 +24,7 @@ cd $HOME
 
 # install vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # install tig
 sudo apt -y install tig
@@ -31,11 +35,11 @@ sudo apt -y install tmux
 # install jq
 sudo apt -y install jq
 
-ln -sf $HOME/ygnmhdtt-isucon/dotfiles-isucon/.vimrc $HOME/.vimrc
-ln -sf $HOME/ygnmhdtt-isucon/dotfiles-isucon/.zshrc $HOME/.zshrc
-ln -sf $HOME/ygnmhdtt-isucon/dotfiles-isucon/.tmux.conf $HOME/.tmux.conf
-ln -sf $HOME/ygnmhdtt-isucon/dotfiles-isucon/.gitconfig $HOME/.gitconfig
-ln -sf $HOME/ygnmhdtt-isucon/dotfiles-isucon/.tigrc $HOME/.tigrc
+ln -sf $HOME/isucon/dotfiles-isucon/.vimrc $HOME/.vimrc
+ln -sf $HOME/isucon/dotfiles-isucon/.zshrc $HOME/.zshrc
+ln -sf $HOME/isucon/dotfiles-isucon/.tmux.conf $HOME/.tmux.conf
+ln -sf $HOME/isucon/dotfiles-isucon/.gitconfig $HOME/.gitconfig
+ln -sf $HOME/isucon/dotfiles-isucon/.tigrc $HOME/.tigrc
 
 . $HOME/.zshrc
 
