@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
 
-if [ `which go` = ""  ]; then
-  echo "Install go"
-  echo "example for xbuil : $ xbuild/go-install 1.10 ~/local/go"
+if [ "$(which go)" = "" ]; then
+  echo "Please install go"
+  echo "example for xbuild : $ xbuild/go-install 1.10 ~/local/go"
   exit 1
 fi
 
@@ -56,12 +56,12 @@ sudo apt -y install percona-toolkit
 # install minifier
 sudo apt install nodejs
 sudo apt install npm
-sudo npm cache clean
-sudo npm install -g n
-sudo n stable
-sudo npm update -g npm
-sudo npm install uglify-js -g
-sudo npm install uglifycss -g
-sudo npm install html-minifier -g
+npm cache clean
+npm install -g n
+n stable
+npm update -g npm
+npm install uglify-js -g
+npm install uglifycss -g
+npm install html-minifier -g
 
 echo 'setup done. Exit and relogin to change shell'
