@@ -43,6 +43,7 @@ ln -sf $HOME/isucon/dotfiles-isucon/.tmux.conf $HOME/.tmux.conf
 ln -sf $HOME/isucon/dotfiles-isucon/.gitconfig $HOME/.gitconfig
 ln -sf $HOME/isucon/dotfiles-isucon/.tigrc $HOME/.tigrc
 
+sudo usermod -s `which zsh` isucon
 . $HOME/.zshrc
 
 # install kataribe
@@ -50,8 +51,6 @@ go get github.com/matsuu/kataribe
 
 # install pt-query-digest
 sudo apt -y install percona-toolkit
-
-sudo usermod -s `which zsh` isucon
 
 # install minifier
 sudo apt install nodejs
