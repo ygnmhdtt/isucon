@@ -15,11 +15,13 @@ sudo apt -y install zsh
 # chsh -s `which zsh`
 
 # install (latest) vim
-sudo apt remove vim
+sudo apt -y remove vim
 wget https://github.com/vim/vim/archive/v8.1.0290.tar.gz
 tar xzvf v8.1.0290.tar.gz
 cd vim-8.1.0290/
 make && sudo make install
+rm -rf v8.1.0290.tar.gz
+rm -rf vim-8.1.0290
 cd $HOME
 
 # install vim-plug
