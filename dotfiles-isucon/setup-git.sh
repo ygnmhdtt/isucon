@@ -1,6 +1,11 @@
 #!/bin/bash
 set -e
 
+if [ -e $HOME/.ssh ]; then
+  :
+else
+  mkdir $HOME/.ssh
+fi
 
 # ssh key for github
 if [ ! -e $HOME/.ssh/github_rsa_isucon ]; then
