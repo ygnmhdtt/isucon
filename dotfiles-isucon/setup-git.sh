@@ -18,3 +18,17 @@ Host github github.com
   User git
 EOT
 fi
+
+echo "Input GitHub username(to register public key to GitHub)"
+read user
+
+echo "Input GitHub password(to register public key to GitHub)"
+read -sp "Password: " password
+
+publickey=`cat $HOME/.ssh/github_rsa_isucon.pub`
+
+curl -XPOST \
+  -H "Content-Type: application/json" \
+  --basic -u "${user}:${password}" \
+  -d "{\"title\": \"${user}@isucon\", \"key\": \"${publickey}\"}" \
+  'https://api.github.com/user/keys'
