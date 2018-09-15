@@ -6,11 +6,11 @@
 export LESS='-i -M -R -W -q -S'
 
 # golang
-export PATH=$PATH:/home/isucon/local/go/bin
-export GOROOT=/home/isucon/local/go
-export GOPATH=`go env GOPATH`
-export PATH=$PATH:$GOPATH/bin
-export PATH=$HOME/local/go/bin:$HOME/go/bin:$PATH
+# export PATH=$PATH:/home/isucon/local/go/bin
+# export GOROOT=/home/isucon/local/go
+# export GOPATH=`go env GOPATH`
+# export PATH=$PATH:$GOPATH/bin
+# export PATH=$HOME/local/go/bin:$HOME/go/bin:$PATH
 
 # default editor
 export EDITOR="vim"
@@ -24,7 +24,7 @@ export EDITOR="vim"
 # ----------------
 
 alias ll='ls -alh'
-alias t='tig'
+# alias t='tig'
 alias vi='vim'
 
 # ----------------
